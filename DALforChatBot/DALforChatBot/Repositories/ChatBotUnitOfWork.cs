@@ -10,9 +10,6 @@ namespace DALforChatBot.Repositories
     {
         private ChatBotContext _context;
 
-        public TimeSpan DialogDelaySetter;
-        public int DialogDelaysCountSetter;
-
         public IMessagesRepository MessagesRepository { get; set; }
         public IRepository<Operator> OperatorsRepository { get; set; }
         public IUserRepository<User> CommonUsersRepository { get; set; }
