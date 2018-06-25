@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>DALforChatBot</id>
+    <version>1.0.3</version>
+    <authors>LebedevDmitriy</authors>
+    <owners>LebedevDmitriy</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/SigizmundLebedev99</licenseUrl>
+    <description>самый лучший DAL для ваших чат-ботов</description>
+    <releaseNotes>Это не оттестированная либа для Dal по практике. Кое-что изменилось, но это не важно, т.к. я выпускаю новую версию, когда фиксю каждую ошибку.</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>DAL practise</tags>
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.0">
+        <dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="2.1.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.Tools" version="2.1.0" exclude="Build,Analyzers" />
+        <dependency id="ModelEntities" version="1.2.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\hp\source\repos\DALforChatBot\DALforChatBot\bin\Debug\netcoreapp2.0\DALforChatBot.runtimeconfig.json" target="lib\netcoreapp2.0\DALforChatBot.runtimeconfig.json" />
+    <file src="C:\Users\hp\source\repos\DALforChatBot\DALforChatBot\bin\Debug\netcoreapp2.0\DALforChatBot.dll" target="lib\netcoreapp2.0\DALforChatBot.dll" />
+  </files>
+</package>
