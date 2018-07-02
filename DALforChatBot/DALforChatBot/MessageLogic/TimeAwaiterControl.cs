@@ -26,23 +26,19 @@ namespace DALforChatBot.MessageLogic
             Tick?.Invoke(state);
         }
 
-        public async void SetParent(MessageInfo info, int id)
+        public void SetParent(MessageInfo info, int id)
         {
-            await Task.Run(() =>
+            var record = Sessions.FirstOrDefault(t => t.User.Id == info.User.Id);
+            if (record == null)
             {
-                var record = Sessions.FirstOrDefault(t => t.User.Id == info.User.Id);
-                if (record == null)
-                {
-                    info.Parent = 0;
-                    AddSession(info.User, id);
-                }
-                else
-                {
-                    record.Timeout = CommonDelay;
-                    info.Parent = record.Parent;
-                }
+                info.Parent = 0;
+                AddSession(info.User, id);
             }
-            );
+            else
+            {
+                record.Timeout = CommonDelay;
+                info.Parent = record.Parent;
+            }
         }
 
         private void AddSession(User user, int parent)
